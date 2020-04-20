@@ -1,10 +1,9 @@
 import React from 'react';
-import {Cards, Chart, CountryPicker} from './components';
+import {Cards, Chart, CountryPicker, HeaderThree, Navbar} from './components';
 import {fetchData} from './api/';
 import styles from './App.module.css';
 import './App.css';
-import image from './images/image.png';
-
+import warning1 from './components/Container/textloop'
 class App extends React.Component {
     state = {
         data: {},
@@ -29,7 +28,8 @@ class App extends React.Component {
         return (
             <div>
             <div className={styles.container}>
-                <img className={styles.image} src={image} alt="COVID-19" />
+                <Navbar></Navbar>
+                <warning1/>
                 <Cards data={data} />
                 <CountryPicker handleCountryChange={this.handleCountryChange} />
                 <Chart data={data} country={country} />
