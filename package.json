@@ -48,5 +48,10 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0"
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }

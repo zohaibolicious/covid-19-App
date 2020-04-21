@@ -4,6 +4,7 @@ import {fetchData} from './api/';
 import styles from './App.module.css';
 import './App.css';
 import warning1 from './components/Container/textloop'
+import TextLoop from "react-text-loop/es";
 class App extends React.Component {
     state = {
         data: {},
@@ -24,6 +25,16 @@ class App extends React.Component {
 
     render() {
         const { data, country } = this.state;
+        if(!data){
+            return(
+            <h1>
+                <TextLoop>
+                    <h1>Hello</h1>
+                    <h1>Hi !</h1>
+                </TextLoop>
+            </h1>
+            )
+        }
 
         return (
             <div>
